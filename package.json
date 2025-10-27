@@ -1,0 +1,10 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@types/pg": "8.11.10",
+    "typeorm": "0.3.20"
+  },
+  "workspaces": [
+    "app"
+  ]
+}

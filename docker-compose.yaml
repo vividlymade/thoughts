@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    env_file: .env
+    restart: always
+    environment:
+      POSTGRES_USER: ${VITE_DB_USER}
+      POSTGRES_PASSWORD: ${VITE_DB_PASSWORD}
+      POSTGRES_DB: ${VITE_DB_NAME}
+    ports:
+      - "${VITE_DB_PORT}:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
