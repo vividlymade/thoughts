@@ -1,8 +1,6 @@
 <script lang="ts">
 	import TopBar from '$lib/TopBar.svelte'
-	import { page } from '$app/state'
 	import { onMount, untrack } from 'svelte'
-    import { get } from 'svelte/store'
 	import realtimeClient from '$lib/realtime/realtimeClient'
 	import notifications, { Notification } from '$lib/notifications.svelte'
 	import settings from '$lib/settings.svelte'

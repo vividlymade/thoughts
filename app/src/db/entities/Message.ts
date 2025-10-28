@@ -2,7 +2,6 @@ import { Entity, PrimaryColumn, Column, type Relation, ManyToOne, RelationId, In
 import User from './User'
 import TableName from '../TableName'
 import MessageConversation from './MessageConversation'
-import type { Attachment } from 'svelte/attachments'
 import MessageImageAttachment from './MessageImageAttachment'
 
 @Entity(TableName.MESSAGES)

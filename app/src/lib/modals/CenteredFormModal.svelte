@@ -1,10 +1,6 @@
 <script lang="ts">
-    import LoginIcon from '$lib/icons/login.svelte'
-    import EmailIcon from '$lib/icons/email.svelte'
-	import { goto } from '$app/navigation'
-	import NextButton from '$lib/NextButton.svelte'
     import { enhance as _enhance } from '$app/forms'
-	import type { Component, Snippet } from 'svelte'
+	import type { Snippet } from 'svelte'
 	import type { SubmitFunction } from '@sveltejs/kit'
 	import type { HTMLFormAttributes } from 'svelte/elements'
 

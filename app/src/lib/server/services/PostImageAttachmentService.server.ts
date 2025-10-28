@@ -1,6 +1,5 @@
 import globals from '../globals'
-import { LargeObjectManager, ReadStream } from 'pg-large-object'
-import User from '../../../db/entities/User'
+import { LargeObjectManager } from 'pg-large-object'
 import TableName from '../../../db/TableName'
 import PostImageAttachment from '../../../db/entities/PostImageAttachment'
 import PGLargeObjectUtils from '$lib/server/PGLargeObjectUtils'

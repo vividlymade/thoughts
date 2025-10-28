@@ -3,7 +3,6 @@ import { Entity, PrimaryColumn, Column, type Relation, ManyToOne, OneToMany, Rel
 import User from './User'
 import TableName from '../TableName'
 import PostImageAttachment from './PostImageAttachment'
-import type UserSession from './UserSession'
 
 @Entity(TableName.POSTS)
 export default class Post {

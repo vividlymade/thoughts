@@ -1,12 +1,11 @@
 <script lang="ts">
     import NotificationIcon from '$lib/icons/notification.svelte'
-    import { scale, fly, draw, fade, crossfade, slide } from 'svelte/transition'
+    import { fly, slide } from 'svelte/transition'
     import { flip } from 'svelte/animate'
     import { onOutsideClick } from '../../actions/onOutsideClick'
     import * as TimeFormatUtils from '../../utils/TimeFormatUtils.svelte'
-	import AppConsts from '../../AppConsts'
 	import iconSrc from '$lib/images/icon.svg'
-	import notifications, { Notification } from '$lib/notifications.svelte'
+	import notifications from '$lib/notifications.svelte'
 
 	let {
 		show = $bindable(),

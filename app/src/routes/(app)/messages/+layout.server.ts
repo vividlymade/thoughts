@@ -1,7 +1,6 @@
 import { redirect } from '@sveltejs/kit'
 import globals from '$lib/server/globals'
 import TableName from '../../../db/TableName'
-import type MessageConversation from '../../../db/entities/MessageConversation'
 import AppConsts from '../../../AppConsts'
 import type MessageConversationParticipation from '../../../db/entities/MessageConversationParticipation'
 import HTTPCode from '../../../HTTPCode'

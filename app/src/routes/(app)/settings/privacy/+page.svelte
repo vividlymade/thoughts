@@ -1,6 +1,5 @@
 <script lang="ts">
     import CheckboxOption from '$lib/settings/SwitchOption.svelte'
-    import Profile from '../../../../Profile'
 
     let { data } = $props()
 

@@ -1,10 +1,6 @@
 <script lang="ts">
     import { portal } from 'svelte-portal'
-    import { fly, scale, slide, blur } from 'svelte/transition'
-	import BlogIcon from '$lib/icons/blog.svelte'
-	import AddCommentIcon from '$lib/icons/add-comment.svelte'
-	import UserFollowIcon from '$lib/icons/user--follow.svelte'
-	import WarningIcon from '$lib/icons/warning--alt--filled.svelte'
+    import { fly, scale, slide } from 'svelte/transition'
 	import FormTextInput from '$lib/modals/FormTextInput.svelte'
 	import PasswordIcon from '$lib/icons/password.svelte'
     import { onOutsideClick } from '../../../../../actions/onOutsideClick'

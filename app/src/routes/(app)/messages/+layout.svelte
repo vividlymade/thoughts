@@ -3,7 +3,7 @@
 	import AddNewConversationButton from './AddNewConversationButton.svelte'
 	import AppConsts from '../../../AppConsts'
 	import { untrack } from 'svelte'
-	import { Channel, ChannelContext, DirectChannel } from './Channel.svelte'
+	import { ChannelContext, DirectChannel } from './Channel.svelte'
 	import chat from '$lib/chat.svelte'
     import { slide } from 'svelte/transition'
 	import ConversationListEntry from './ConversationListEntry.svelte'

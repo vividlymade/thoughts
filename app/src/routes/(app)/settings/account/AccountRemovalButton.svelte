@@ -1,6 +1,5 @@
 <script lang="ts">
 import TrashCanIcon from '$lib/icons/trash-can.svelte'
-import WarningIcon from '$lib/icons/warning--alt--filled.svelte'
 import AccountRemovalPortal from './portals/AccountRemovalPortal.svelte'
 
 let {

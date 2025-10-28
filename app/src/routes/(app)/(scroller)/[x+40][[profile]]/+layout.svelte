@@ -10,15 +10,10 @@
 	import type { Snippet } from 'svelte'
 	import UserFollowButton from '$lib/UserFollowButton.svelte'
 	import { goto } from '$app/navigation'
-	import type { ResponseConversation } from '../../../api/conversation/+server'
     import LoadingIcon from '$lib/icons/loading.svelte'
-	import TrashCanIcon from '$lib/icons/trash-can.svelte'
     import { onOutsideClick } from '../../../../actions/onOutsideClick'
-    import { scale, fly } from 'svelte/transition'
+    import { scale } from 'svelte/transition'
     import BlockIcon from '$lib/icons/error.svelte'
-    import { portal } from 'svelte-portal'
-    import { documentScrollLock } from '../../../../actions/documentScrollLock'
-	import Cropper from 'svelte-easy-crop'
     import AppConsts from '../../../../AppConsts'
 
 	let { data, children }: PageProps & { children: Snippet } = $props()

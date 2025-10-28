@@ -3,7 +3,6 @@ import type Post from '../../../db/entities/Post'
 import type { PostReplyResponse, ResponsePost } from '../../../routes/api/posts/+server'
 import type { Repository } from 'typeorm'
 import type PostLike from '../../../db/entities/PostLike'
-import type User from '../../../db/entities/User'
 
 export default {
 	getImageAttachmentIds(attachments: PostImageAttachment[]) {
