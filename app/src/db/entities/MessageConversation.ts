@@ -26,14 +26,13 @@ export default class MessageConversation {
     @Column('uuid', { nullable: true })
     @RelationId((conversation: MessageConversation) => conversation.latestMessageAuthor)
     latestMessageAuthorId?: string
-    /** The author of the latest message. */
+    /** The author of the latest message in this conversation. */
     @ManyToOne(() => User, { nullable: true })
     latestMessageAuthor?: Relation<User>
-    /** The timestamp of when the latest message was received by the server. */
+    /** The timestamp of when the latest message in this conversation was received by the server. */
     @Column('timestamptz', { nullable: true })
     latestMessageTime?: Date
-
-    /** The content of the latest message. */
+    /** The content of the latest message in this conversation. */
     @Column('text', { nullable: true })
     latestMessageContent!: string
 

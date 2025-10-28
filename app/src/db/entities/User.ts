@@ -14,12 +14,12 @@ export default class User {
     @PrimaryColumn('uuid')
     id!: string
 
-    /** The handle of the user. */
+    /** The unique public handle of this user. */
     @Index()
     @Column('text', { unique: true })
     handle!: string
 
-    /** The name of the user. */
+    /** The public name of this user. */
     @Column('text')
     name!: string
 
@@ -27,24 +27,24 @@ export default class User {
     @Column('text', { unique: true })
     email!: string
 
-    /** The profile picture of the user. */
+    /** The profile picture OID of this user. */
     @Column({ type: 'oid' as any, nullable: true })
     pictureOid!: number
 
-    /** The description of the user. */
+    /** The description of this user's profile. */
     @Column('text', { nullable: true })
     description?: string
 
     @Column('text', { select: false })
     passwordHash!: string
-    /** The registration timestamp of the user. */
+    /** The registration timestamp of this user. */
     @Column('timestamptz')
     registrationTimestamp!: Date
 
     @Column('boolean', { default: false })
     hasVisitedWelcomePage!: boolean
 
-    /** The relation between posts that have been posted by the user. */
+    /** The posts that user has posted. */
     @OneToMany(() => Post, (post) => post.author)
     posts!: Relation<Post>[]
     @OneToMany(() => PostShare, (postShare) => postShare.author)

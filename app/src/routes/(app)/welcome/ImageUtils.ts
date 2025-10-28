@@ -18,7 +18,7 @@ class ImageUtils {
 			imageInstance = sharp(buffer, {
 				animated: animated,
 			})
-			/** Validates if it's actually an image and gets metadata. */
+			/** Validates if it's actually a valid image and gets its metadata. */
 			metadata = await imageInstance.metadata()
 		} catch (error) {
 			return ImageValidationError.INVALID_IMAGE

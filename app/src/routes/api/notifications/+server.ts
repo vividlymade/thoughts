@@ -40,7 +40,7 @@ export async function GET(event) {
 		.where('post."authorId" = :id', { id: session!.userId, })
 		.orderBy('post.timestamp', 'DESC')
 		.addOrderBy('post.id', 'DESC')
-		/** Gets the max allowed notifications per load along with the extra one for checking whether there is more results. */
+		/** Gets the maximum allowed notifications per load along with the extra one for checking whether there is more results. */
 		.take(AppConsts.MAX_NOTIFICATIONS_PER_LOAD + 1)
 
 	throw error(HTTPCode.INTERNAL_SERVER_ERROR)

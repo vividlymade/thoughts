@@ -19,7 +19,7 @@
     const compactNumberFormatter = new Intl.NumberFormat(undefined, { notation: 'compact' })
 
     function onInput() {
-		/** Clears the suggestions. */
+		/** Clears the previous suggestions. */
 		if(suggestions.length > 0) {
 			suggestions = []
 		}

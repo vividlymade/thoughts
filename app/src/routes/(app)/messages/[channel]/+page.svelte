@@ -155,7 +155,7 @@
                 newMessage.authorHandle = data.localUserHandle!
                 newMessage.time = new Date(responseData.time)
                 newMessage.content = content
-                /** TODO */
+                /** TODO: Implement attachment feature in the DMs. */
                 newMessage.attachments = []
 
 				content = ""

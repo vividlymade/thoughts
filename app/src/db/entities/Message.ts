@@ -21,7 +21,7 @@ export default class Message {
 
     @PrimaryColumn('uuid')
     id!: string
-    /** The timestamp of when the message was received by the server. */
+    /** The timestamp when this message was received by the server. */
     @Column('timestamptz')
     time!: Date
 

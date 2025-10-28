@@ -29,7 +29,7 @@
     let debounceTimer: ReturnType<typeof setTimeout> | undefined = $state()
 
     function onInput() {
-		/** Clears the current search. */
+		/** Clears the current search results. */
 		if(searchResults.length > 0) {
 			searchResults = []
 		}
