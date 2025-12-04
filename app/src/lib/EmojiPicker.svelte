@@ -53,16 +53,9 @@
         --background-rgb: 85, 170, 255;
         --border-radius: 24px;
         --category-icon-size: 16px;
-        /*--color-border-over: rgba(0, 0, 0, 0.1);*/
         --preview-placeholder-size: 10px;
         --font-family: inherit;
-        /*--font-family: "Noto Sans";*/
-        /*--color-border: rgba(0, 0, 0, 0.05);*/
         --font-size: 12px;
-        /*--rgb-accent: 255, 105, 180;*/
-        /*--rgb-background: 262, 240, 283;*/
-        /*--rgb-color: 102, 51, 153;*/
-        /*--rgb-input: 255, 235, 235;*/
         --shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
 
         width: 300px;
