@@ -104,7 +104,7 @@
     <div class="flex flex-col space-y-22 items-center">
         <div class="p-6.5 px-10 bg-white/80 rounded-4xl backdrop-blur-xs" style="box-shadow: 0px 4px 50px rgba(0,0,0,0.11);">
             <h2 class="font-extralight text-[#535353] text-[16px]">
-                Discover what others talk about and share your own <u><b>thoughts!</b></u>
+                Discover what others talk about and share your own <span class="text-[#5081D4] font-light">thoughts!</span>
             </h2>
         </div>
 
