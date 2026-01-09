@@ -53,12 +53,14 @@ export default {
 		}
 	},
 
+	/** Gets all the likes for the given post. It doesn't use denormalized counter. */
 	async countPostLikes(postLikesRepository: Repository<PostLike>, post: Post) {
 		return await postLikesRepository.countBy({
 			postId: post.id,
 		})
 	},
 
+	/** Checks whether the post is liked by the given user. */
 	async isPostLikedByUser(postLikesRepository: Repository<PostLike>, postId: string, userId: string) {
 		return await postLikesRepository.findOneBy({
 			postId: postId,

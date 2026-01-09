@@ -17,6 +17,7 @@ export default class Post {
         nullable: true,
         onDelete: 'CASCADE',
     })
+    /** The parent post this post is replying to. */
     replyingToPost?: Post
 
     /** The timestamp of when the post was created. */
@@ -40,9 +41,11 @@ export default class Post {
     @OneToMany(() => Post, (post) => post.replyingToPost)
     replies!: Relation<Post>[]
 
+    /** The denormalized counter reflecting the total number of associated `PostLike` records for this post. */
     @Column('bigint', { default: 0 })
     likeCount!: bigint
 
+    /** The denormalized counter reflecting the total number of associated `Post` records for this post. */
     @Column('bigint', { default: 0 })
     repliesCount!: bigint
 

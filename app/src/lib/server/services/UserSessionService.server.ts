@@ -57,6 +57,7 @@ export default {
         return session
     },
 
+    /** Performs a check and guards the route from unauthorized access during an HTTP request. */
     async guardAuthorizedRoute(cookies: Cookies) {
         const isValidSession = await this.getAndProcessSession(cookies)
 

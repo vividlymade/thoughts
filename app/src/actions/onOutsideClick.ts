@@ -1,5 +1,9 @@
 import type { Action } from 'svelte/action'
 
+/**
+ * An action responsible for registering and detecting a given `click` events outside of the element it is applied to. handler when the component is mounted.
+ * Cleans up the event listener automatically when unmounted.
+ */
 export const onOutsideClick: Action<HTMLElement, () => void> = (node, handler) => {
 	const handleClick = (event: MouseEvent) => {
 		if (node) {
@@ -13,9 +17,11 @@ export const onOutsideClick: Action<HTMLElement, () => void> = (node, handler) =
 		}
 	}
 
-	document.addEventListener('click', handleClick, {
-		capture: true,
-	})
+	/** Defer adding the listener to the next event loop cycle so the click
+	 * that opened the component won't immediately trigger the handler. */
+	setTimeout(() => {
+		document.addEventListener('click', handleClick)
+	}, 0)
 
 	return {
 		destroy() {

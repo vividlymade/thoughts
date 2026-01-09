@@ -23,6 +23,7 @@ export default class User {
     @Column('text')
     name!: string
 
+    /** The e-mail of this user. */
     @Index()
     @Column('text', { unique: true })
     email!: string
@@ -47,30 +48,38 @@ export default class User {
     /** The posts that user has posted. */
     @OneToMany(() => Post, (post) => post.author)
     posts!: Relation<Post>[]
+    /** The posts that user has shared. */
     @OneToMany(() => PostShare, (postShare) => postShare.author)
     postShares!: Relation<PostShare>[]
 
+    /** The currently active sessions for this user's account. */
     @OneToMany(() => UserSession, (session) => session.user)
     activeSessions!: Relation<UserSession>[]
 
+    /** The users following this user. */
     @OneToMany(() => UserFollow, (follow) => follow.followee)
     followers!: Relation<UserFollow>[]
 
+    /** The users followed by this user. */
     @OneToMany(() => UserFollow, (follow) => follow.follower)
     following!: Relation<UserFollow>[]
 
     @OneToMany(() => Notification, (notification) => notification.recipient)
     notifications!: Relation<Notification>[]
 
+    /** The denormalized counter reflecting the total number of associated `UserFollow` records for this user. */
     @Column('bigint', { default: 0 })
     followersCount!: bigint
 
+    /** The denormalized counter reflecting the total number of associated `UserFollow` records of other users followed by this user. */
     @Column('bigint', { default: 0 })
     followingCount!: bigint
 
+    /** The conversations this user is participating in. */
     @OneToMany(() => MessageConversation, (conversation) => conversation.participants)
     conversations!: Relation<MessageConversation>
 
+    /** The identifier of the last active conversation. Used for recalling the last conversation when opening the messenger. */
     @Column('uuid', { nullable: true })
     lastActiveConversationId?: string
 

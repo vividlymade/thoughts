@@ -1,3 +1,4 @@
+/** Note: This enumeration is intentionally incomplete, missing entries can be added when needed. */
 enum HTTPCode {
     SUCCESS = 200,
     CREATED = 201,

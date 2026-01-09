@@ -7,8 +7,10 @@ import TableName from '../TableName'
 export default class PostShare {
     @PrimaryColumn('uuid')
     id!: string
+    /** The time when the post was shared. */
     @Column('timestamptz')
     timestamp!: Date
+    /** The user who shared the post. */
     author!: Relation<User>
     @ManyToOne(() => User, (user) => user.posts)
     sharedPost!: Relation<Post>
