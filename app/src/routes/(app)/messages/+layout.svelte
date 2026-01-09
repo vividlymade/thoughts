@@ -47,8 +47,6 @@
 			method: 'POST',
 		})
 	}
-
-	let canSend = $state(false)
 </script>
 
 <svelte:head>

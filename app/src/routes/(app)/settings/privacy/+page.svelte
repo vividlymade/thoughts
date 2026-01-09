@@ -6,26 +6,6 @@
     let allowMessagesFromEveryone = $derived(data.settings.privacy.allowMessagesFromEveryone || false)
 	let keepAccountPrivate = $state(data.settings.privacy.keepAccountPrivate || false)
 
-
-    function onKeepAccountPrivateToggle() {
-		// if(keepAccountPrivate) {
-		//     fetch('/api/settings/privacy/keepPrivate/enable', {
-        //     	method: 'PATCH',
-        //     }).then((response) => {
-		//
-		// 	})
-        // } else {
-		// 	fetch('/api/settings/privacy/keepPrivate/enable', {
-        //     	method: 'PATCH',
-        //     }).then((response) => {
-		//
-		// 	})
-        // }
-    }
-
-    $effect(() => {
-    })
-
     let blockedAccounts = $state([])
 
     let awaitingForResponse = $state(false)

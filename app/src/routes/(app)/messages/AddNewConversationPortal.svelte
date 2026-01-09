@@ -80,8 +80,6 @@
 		clearTimeout(debounceTimer)
     })
 
-    let pendingLoad = $derived(!!debounceTimer)
-
     const compactNumberFormatter = new Intl.NumberFormat(undefined, { notation: 'compact' })
 </script>
 
