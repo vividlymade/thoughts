@@ -112,6 +112,8 @@
 
 	let showBackgroundEditor = $state(false)
 
+    /** TODO: Add background picker. */
+
     function onBackgroundImageFileChange() {}
 </script>
 
@@ -224,6 +226,7 @@
         </a>
     {/snippet}
     {@render entry('', BlogIcon, "Posts")}
+    <!-- TODO: Implement proper post sharing. -->
     <!--{@render entry('shares', "Shares")}-->
     {@render entry('media', MediaLibraryIcon, "Media")}
 </div>
@@ -231,6 +234,7 @@
     {@render children()}
 </div>
 
+<!-- TODO: Implement background picker feature. -->
 <!--{#if showBackgroundEditor}-->
 
 <!--{/if}-->

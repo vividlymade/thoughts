@@ -17,6 +17,7 @@ export async function GET(event) {
 
     const messageConversationsRepository = globals.db.manager.connection.getRepository<MessageConversation>(TableName.USERS)
 
+	/** TODO: Implement proper conversation search query. */
 	const conversations = await messageConversationsRepository
         .createQueryBuilder('conversation')
         // .select([

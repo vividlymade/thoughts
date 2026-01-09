@@ -40,6 +40,7 @@ class ImageUtils {
 	}
 
 	static convertAndCompressImageIntoNormalizedFormat(image: sharp.Sharp) {
+		/** TODO: Let the quality be soft-coded. */
 		return image.webp({ quality: 80 })
 			.toBuffer()
 	}

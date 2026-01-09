@@ -17,6 +17,7 @@ import type PostLike from '../../../db/entities/PostLike'
 import DBPostUtils from '$lib/server/services/PostService.server'
 import { IsNull } from 'typeorm'
 
+/** TODO: Implement a simple algorithm for getting the user's home feed. */
 // async function getHomeFeed(userId: string, page: number = 1, limit: number = 20) {
 // 	const followRepository = await Global.db.manager.connection.getRepository<UserFollow>(DBTableName.USER_FOLLOWS)
 //
@@ -72,6 +73,7 @@ export interface PostsResponse {
 }
 
 export async function GET(event) {
+	/** TODO: Implement proper pagination. */
 	// const formData = await event.request.formData()
 
 	// let rawCursor = formData.get('cursor')

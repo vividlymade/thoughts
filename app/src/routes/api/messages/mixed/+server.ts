@@ -130,6 +130,8 @@ export async function POST(event) {
 		)
 	}
 
+	/** TODO: Handle `processedAttachments`, store in the database and attach those to the DTO `Message` objects. */
+
 	const newMessage = new Message()
 
 	newMessage.id = randomUUID()
@@ -141,6 +143,8 @@ export async function POST(event) {
 	if(replyingToMessageId) {
 		newMessage.replyingToId = replyingToMessageId
 	}
+
+	/** TODO: Inform others about the message over the realtime WebSocket channel. */
 
 	await globals.db.manager.connection.transaction(async (entityManager) => {
 		const messageConversationsRepository = entityManager.getRepository<MessageConversation>(TableName.MESSAGE_CONVERSATIONS)

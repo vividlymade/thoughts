@@ -57,6 +57,7 @@
         {/each}
     </div>
     {#if hasMoreUsers}
+        <!-- TODO: Handle cursor loading for search results. -->
         <button
             class="text-[11px] font-light text-[#BDBDBD] p-3 bg-white w-fit self-center rounded-2xl active:scale-90 transition-all cursor-pointer"
             style="box-shadow: 0px 2px 15px rgba(0,0,0,0.04);"
