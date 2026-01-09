@@ -175,12 +175,15 @@
                     {#if isEditing}
                         <textarea
                             transition:fly
-                            class="placeholder:text-[#B1B1B1] text-[#818181] text-[11px] font-light flex resize-none outline-none"
+                            class="placeholder:text-[#B1B1B1] text-[#818181] text-[11px] font-light flex resize-none
+                             outline-none"
                             bind:value={post.content}
                             use:onOutsideClick="{() => { isEditing = false }}"
                         >{post.content}</textarea>
                     {:else}
-                        <p role="article" ondblclick={() => { isEditing = true }} class="text-[#575757] text-[11px] whitespace-pre-line wrap-anywhere mr-8 *:py-0.75 fit-content">
+                        <p role="article" ondblclick={() => { isEditing = true }} class="text-[#575757] text-[11px]
+                            whitespace-pre-line wrap-anywhere mr-8 *:py-0.75 fit-content"
+                        >
                             {#each textContentParts as part}
                                 {#if part.type === TextContentEntryType.TEXT}
                                     {part.text}
@@ -202,13 +205,15 @@
                 >
                     {#each post.attachments as attachment}
                         {#if attachment.type === AttachmentType.IMAGE}
-                            <button class="overflow-clip self-center max-h-44 cursor-pointer rounded-xl mb-4 drop-shadow-xl/5 hover:drop-shadow-xl/10 transition-all"
+                            <button class="overflow-clip self-center max-h-44 cursor-pointer rounded-xl mb-4
+                                drop-shadow-xl/5 hover:drop-shadow-xl/10 transition-all"
                                     style="box-shadow: 0px 2px 5px rgba(0,0,0,0.05);"
                                     onclick={() => {
                                         currentlyPreviewedAttachment = attachment
                                     }}>
                                 <img src={attachment.source} alt=""
-                                     class="object-cover max-h-44 will-change-transform active:scale-95 hover:scale-105 hover:brightness-80 transition-all duration-300 rounded-xl"
+                                     class="object-cover max-h-44 will-change-transform active:scale-95 hover:scale-105
+                                        hover:brightness-80 transition-all duration-300 rounded-xl"
                                 >
                             </button>
                         {/if}
@@ -219,7 +224,10 @@
         <div class="flex justify-between mx-15 select-none">
             <div class="active:scale-90 duration-200 transition-transform will-change-transform">
                 <button title="Like" onclick={onLikeChangeRequest} disabled={awaitingForLikeResponse}
-                        class="flex place-content-center cursor-pointer place-items-center {post.hasBeenLikedLocally ? 'bg-red-50 text-red-300' : 'text-zinc-600 hover:bg-red-50 hover:text-red-300'} transition-colors rounded-lg p-2 box-border duration-400">
+                        class="flex place-content-center cursor-pointer place-items-center {post.hasBeenLikedLocally ?
+                            'bg-red-50 text-red-300' : 'text-zinc-600 hover:bg-red-50 hover:text-red-300'}
+                            transition-colors rounded-lg p-2 box-border duration-400"
+                >
                     <span class="flex size-4 mr-2 place-content-center">
                         {#if post.hasBeenLikedLocally}
                             <span class="flex" in:scale out:slide={{ axis: 'x' }}>
@@ -236,7 +244,10 @@
             </div>
             <div class="active:scale-90 duration-200 transition-transform will-change-transform">
                 <button title="Comments" onclick={toggleRepliesSection}
-                        class="flex place-content-center cursor-pointer place-items-center hover:bg-sky-50 hover:text-blue-300 text-zinc-600 transition-colors rounded-lg p-2 box-border duration-400">
+                        class="flex place-content-center cursor-pointer place-items-center hover:bg-sky-50
+                            hover:text-blue-300 text-zinc-600 transition-colors rounded-lg p-2 box-border
+                            duration-400"
+                >
                     <span class="flex size-4 mr-2 place-content-center">
                         <AddCommentIcon/>
                     </span>

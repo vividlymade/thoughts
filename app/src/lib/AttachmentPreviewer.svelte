@@ -21,7 +21,8 @@
          }
      }}
      transition:fly
-     class="bg-black/20 backdrop-blur-[1px] fixed top-0 bottom-0 left-0 right-0 flex flex-col space-y-2 items-center justify-center">
+     class="bg-black/20 backdrop-blur-[1px] fixed top-0 bottom-0 left-0 right-0 flex flex-col
+        space-y-2 items-center justify-center">
     <div>
         <div class="relative self-end">
             <button
@@ -39,7 +40,8 @@
             use:onOutsideClick={() => attachment = undefined}
             transition:scale
             src={attachment.source} alt=""
-            class="object-cover will-change-transform active:scale-95 transition-all duration-300 rounded-xl shadow-lg bg-white min-h-72 max-h-112"
+            class="object-cover will-change-transform active:scale-95 transition-all duration-300
+                rounded-xl shadow-lg bg-white min-h-72 max-h-112"
         >
     </div>
 </div>

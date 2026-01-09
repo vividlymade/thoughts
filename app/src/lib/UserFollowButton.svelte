@@ -69,7 +69,8 @@
 
 <button
     onclick={onClick}
-    class="{isLocalUserFollowing ? 'bg-white text-[#BABABA]' : 'bg-[#3c76ff] text-white'}  px-4 rounded-3xl active:scale-90 transition-all text-[10px] cursor-pointer flex items-center space-x-2.5 h-8"
+    class="{isLocalUserFollowing ? 'bg-white text-[#BABABA]' : 'bg-[#3c76ff] text-white'}
+        px-4 rounded-3xl active:scale-90 transition-all text-[10px] cursor-pointer flex items-center space-x-2.5 h-8"
     style="box-shadow: 0px 2px 4px rgba(0,0,0,0.1);"
 >
     <span class="size-4 flex">

@@ -24,7 +24,9 @@
 <form method="post"
       enctype={enctype}
       use:_enhance={enhance}
-      class="relative w-full h-fit flex flex-col content-center place-items-center place-self-center bg-white/50 backdrop-blur-xs rounded-4xl px-12 py-8 justify-self-center space-y-3 select-none" style="box-shadow: 0px 2px 50px rgba(0,0,0,0.05); backdrop-filter: blur(2.5px);"
+      class="relative w-full h-fit flex flex-col content-center place-items-center place-self-center bg-white/50
+        backdrop-blur-xs rounded-4xl px-12 py-8 justify-self-center space-y-3 select-none"
+      style="box-shadow: 0px 2px 50px rgba(0,0,0,0.05); backdrop-filter: blur(2.5px);"
     >
     <h1 class="font-light text-[#0a0a0a] text-xl flex items-center self-start">
         <span class="w-4.5 mr-3">{@render headerIcon()}</span>

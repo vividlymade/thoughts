@@ -38,16 +38,22 @@ function toggleProfileMenu() {
 }
 </script>
 
-<div style="view-transition-name: top-bar;" class="sticky top-0 flex z-1000 h-14 items-center justify-between bg-white drop-shadow-sm/5 border border-[#EFEFEF]">
+<div style="view-transition-name: top-bar;" class="sticky top-0 flex z-1000 h-14 items-center justify-between bg-white
+        drop-shadow-sm/5 border border-[#EFEFEF]"
+>
     <div class="flex-2 flex flex-row items-center space-x-5">
-        <a href="{isLoggedIn ? '/home' : '/#'}" class="flex w-fit h-fit ml-8 active:scale-95 transition-all drop-shadow-md/4">
+        <a href="{isLoggedIn ? '/home' : '/#'}" class="flex w-fit h-fit ml-8 active:scale-95 transition-all
+            drop-shadow-md/4"
+        >
             <img src={logoSrc} class="w-34" alt={AppConsts.PROJECT_NAME} draggable="false">
         </a>
         <Search/>
     </div>
     <div class="flex-1 h-full p-0!">
         <div class="flex-1 h-full flex justify-center items-center p-0!">
-            <div class="flex flex-1 box-content px-5 max-w-fit min-h-full justify-self-center select-none border-b-2 border-[#4DB2FF] text-[#B1B1B1] text-xs space-x-2 items-center">
+            <div class="flex flex-1 box-content px-5 max-w-fit min-h-full justify-self-center select-none border-b-2
+                border-[#4DB2FF] text-[#B1B1B1] text-xs space-x-2 items-center"
+            >
                 {#if showAnimated}
                     <span transition:scale={{ duration: 500 }} class="block size-5">{@render page.data.main.headerIcon?.()}</span>
                 {/if}

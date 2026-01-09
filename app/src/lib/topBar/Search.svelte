@@ -91,9 +91,10 @@
                     <input
                            onclick={(e) => e.stopPropagation()}
                            onfocus={(e) => { isFocused = true } }
-                           placeholder="Search {AppConsts.PROJECT_NAME}..." oninput={onInput} bind:value={searchPhrase} type="search" name="q" autocomplete="off" pattern=".*\S.*" required
-                           class="outline-none text-[11px] p-2.5 flex-1 placeholder:text-[#B1B1B1] text-[#414141] font-extralight
-                           [&::-webkit-search-cancel-button]:cursor-pointer"
+                           placeholder="Search {AppConsts.PROJECT_NAME}..." oninput={onInput} bind:value={searchPhrase}
+                           type="search" name="q" autocomplete="off" pattern=".*\S.*" required
+                           class="outline-none text-[11px] p-2.5 flex-1 placeholder:text-[#B1B1B1] text-[#414141]
+                               font-extralight [&::-webkit-search-cancel-button]:cursor-pointer"
                     >
             </label>
         </div>

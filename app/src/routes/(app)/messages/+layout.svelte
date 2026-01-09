@@ -66,7 +66,8 @@
             <input
                 id="search"
                 placeholder="Search..."
-                class="text-xs font-light w-full outline-none placeholder:text-[#b1b1b1] placeholder:select-none text-[#000000]"
+                class="text-xs font-light w-full outline-none placeholder:text-[#b1b1b1] placeholder:select-none
+                    text-[#000000]"
                 bind:value={conversationsSearchValue}
             >
         </div>
