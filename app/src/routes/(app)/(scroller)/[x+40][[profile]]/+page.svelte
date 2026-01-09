@@ -51,10 +51,10 @@
                         attachments,
                         post.timestamp,
 						post.repliesCount,
-						/** TODO */
+						/** TODO: Handle loading of the replies on posts loaded by the profile page as well. */
                         [],
                         post.likes,
-						/** TODO */
+						/** TODO: Implement proper sharing implementation. */
                         0,
                         hasBeenLikedLocally,
                     )

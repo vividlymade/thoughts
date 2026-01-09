@@ -29,7 +29,7 @@ export async function GET(event) {
 
 	const notificationsRepository = globals.db.manager.connection.getRepository<Notification>(TableName.NOTIFICATIONS)
 
-	/** TODO */
+	/** TODO: Add `afterTimeCursor` and `lastNotificationCursor` to the query as an option. */
 	notificationsRepository
 		.createQueryBuilder('notification')
 			.leftJoinAndSelect('post.author', 'author')

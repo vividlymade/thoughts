@@ -33,7 +33,7 @@ export async function GET(event) {
         .take(AppConsts.MAX_SEARCH_USER_RESULTS + 1)
         .getMany()
 
-	/** TODO */
+	/** TODO: Implement DTO object creation and prepare response with those. */
 
 	throw error(HTTPCode.INTERNAL_SERVER_ERROR)
 }

@@ -45,13 +45,13 @@ export function load(event) {
             responsePost.content,
             attachments,
             responsePost.time,
-            /** TODO */
+            /** TODO: Pass from the backend the denormalized replies count.  */
             responsePost.replies,
             [],
             responsePost.likes,
-            /** TODO */
+            /** TODO: Pass from the backend the denormalized share count. */
             0,
-            /** TODO */
+            /** TODO: Pass from the backend the state about whether it has been liked by the local user. */
             false
         )
 

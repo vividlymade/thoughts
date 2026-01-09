@@ -24,7 +24,7 @@ export default {
 			const attachmentIds = reply.attachments
 
 			replies.push({
-				/** TODO */
+				/** TODO: Handle attachments. */
 				attachments: [],
 				authorId: reply.authorId,
 				authorHandle: reply.author.handle,

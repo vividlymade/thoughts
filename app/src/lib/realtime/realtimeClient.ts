@@ -54,7 +54,7 @@ export default {
 				case ServerRealtimePacketType.CHAT_MESSAGE: {
 					const chatMessagePacket = packet as ServerChatMessagePacket
 
-					/** TODO */
+					/** TODO: Implement handling chat messages. */
 					// const existingContext = chat.contexts.find((context) => {
 					// 	return context.channel.id === chatMessagePacket.channel
 					// })
@@ -63,7 +63,7 @@ export default {
 					break
 				}
 				case ServerRealtimePacketType.CHAT_MESSAGE_REPLY: {
-					/** TODO */
+					/** TODO: Implement handling chat message replies. */
 
 					break
 				}
