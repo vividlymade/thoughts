@@ -4,7 +4,6 @@
 	import type { SubmitFunction } from '@sveltejs/kit'
 	import type { HTMLFormAttributes } from 'svelte/elements'
 
-
     let {
 		headerIcon,
         headerText,
@@ -18,7 +17,6 @@
         children: Snippet,
         enctype?: HTMLFormAttributes['enctype'],
     } = $props()
-
 </script>
 
 <form method="post"
