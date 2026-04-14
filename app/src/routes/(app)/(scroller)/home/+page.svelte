@@ -102,8 +102,8 @@
         <div class="z-1 relative w-full">
             <NewPost
                 localUserId={data.localUserId}
-                localUserHandle={data.localUserHandle}
-                localUserName={data.localUserName}
+                localUserHandle={data.localUserHandle!}
+                localUserName={data.localUserName!}
                 onPostSuccess={(post) => {
                     loadedPosts.unshift(post)
                 }}
