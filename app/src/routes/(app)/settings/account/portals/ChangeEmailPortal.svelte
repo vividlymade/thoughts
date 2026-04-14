@@ -69,7 +69,7 @@
                 <p class="font-semibold text-sm">Changing e-mail</p>
             </div>
             <FormTextInput label="Current e-mail" placeholder="Your current e-mail" icon={EmailIcon} bind:value={currentEmail} type="email" />
-            <FormTextInput label="Current e-mail" placeholder="Your new e-mail" icon={EmailIcon} bind:value={newEmail} type="email" />
+            <FormTextInput label="New e-mail" placeholder="Your new e-mail" icon={EmailIcon} bind:value={newEmail} type="email" />
             <FormTextInput label="Current password" placeholder="Your password" icon={PasswordIcon} bind:value={currentPassword} type="password" />
         </div>
 
