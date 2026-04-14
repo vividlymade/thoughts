@@ -2,7 +2,6 @@
     import '../app.css'
 	import Background from '$lib/Background.svelte'
     import { onNavigate } from '$app/navigation'
-	import { onMount } from 'svelte'
     import favIcon from '$lib/images/icon.svg'
 
     let { children } = $props()

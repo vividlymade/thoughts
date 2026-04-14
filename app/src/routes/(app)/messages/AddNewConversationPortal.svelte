@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { portal } from 'svelte-portal'
-	import { fly, scale, slide, blur } from 'svelte/transition'
+	import { fly, scale, slide } from 'svelte/transition'
 	import { onOutsideClick } from '../../../actions/onOutsideClick'
 	import FormTextInput from '$lib/modals/FormTextInput.svelte'
     import SearchIcon from '$lib/icons/search.svelte'
