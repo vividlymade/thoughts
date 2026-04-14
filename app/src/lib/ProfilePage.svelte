@@ -35,9 +35,6 @@
                 {#if post.type === PostType.ROOT_POST}
                 {post.author}
                 {/if}
-                <!--{:else if post.type === PostType.POST_RESPONSE}-->
-                <!--{:else if post.type === PostType.SHARED_POST}-->
-                <!--{/if}-->
             </div>
         {/each}
     </div>

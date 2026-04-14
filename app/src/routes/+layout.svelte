@@ -75,11 +75,6 @@
         display: flex;
         flex-direction: column;
         view-transition-name: content;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*display: flex;*/
-        /*width: 100vw;*/
         min-height: 100vh;
-        /*place-content: center;*/
     }
 </style>

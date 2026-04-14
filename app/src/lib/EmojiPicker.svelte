@@ -19,10 +19,6 @@
 
     function onEmojiPickerWrapperMount(wrapper: any) {
 		(async function() {
-			// if (!$EmojiMart) {
-			// 	EmojiMart.set(await import('emoji-mart'))
-			// }
-
 			picker = new EmojiMart!.Picker({
 				data: data,
 				theme: 'light',
