@@ -54,6 +54,8 @@
             }).then(async (response) => {
                 const newResults = await response.json() as UsersSearchResponse
 
+                /** FIXME: Fix duplicated entries appearing in the results.  */
+
                 for(const entry of newResults.users) {
                     const profile = new Profile(
 						entry.id,
