@@ -1,4 +1,5 @@
 ## Thoughts
+A social media prototype recreating known mainstream platform concepts from scratch.
 
 ### Stack used
 - **Vite** - build tool and development server.
