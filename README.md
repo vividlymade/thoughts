@@ -12,3 +12,13 @@
 ### Requirements
 - Node.js / Bun
 - Docker
+
+### Setting-up & Running
+1. **Clone this repository**
+2. **Configure `.env` file**
+3. **Start containerized services:**
+   - `docker compose up -d`
+4. **Initialize database structure:**
+   - `npm run db:migrate:initial`
+5. **Run development server:**
+   - `npm run dev`
