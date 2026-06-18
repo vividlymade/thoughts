@@ -22,3 +22,12 @@
    - `npm run db:migrate:initial`
 5. **Run development server:**
    - `npm run dev`
+
+### Stopping application
+1. **Stop the development server:**
+   - Press `Ctrl + C` in the terminal running the server.
+2. **Shut down the containerized services:**
+   - Run the command to shut down containerized services:
+   ```bash
+   docker compose down
+   ```
