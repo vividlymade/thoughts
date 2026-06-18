@@ -322,7 +322,7 @@ let showEmojiPicker = $state(false)
         </button>
         </div>
     </div>
-    <div class="{isDraggingOver ? 'bg-white/90 backdrop-blur-xl' : 'bg-white opacity-0'} space-x-3 text-xs pointer-events-none w-full h-full top-0 left-0 flex items-center justify-center font-extralight absolute z-100">
+    <div class="{isDraggingOver ? 'bg-white/50 backdrop-blur-xs' : 'bg-white opacity-0'} transition-all duration-300 rounded-3xl space-x-3 text-xs pointer-events-none w-full h-full top-0 left-0 flex items-center justify-center font-extralight absolute z-100">
         <div class="size-5"><ImageIcon/></div>
         <p>Drop your attachments here</p>
     </div>
