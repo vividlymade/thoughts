@@ -134,7 +134,7 @@
 <div class="flex flex-col text-xs backdrop-blur-xs rounded-3xl bg-[#fefefe]/90"
      style="box-shadow: 0px 2px 10px rgba(0,0,0,0.03);"
 >
-    <div class="flex flex-col w-full rounded-3xl pb-2.5 p-4 border-b border-b-zinc-100 space-y-3">
+    <div class="flex flex-col w-full rounded-3xl pb-2.5 p-4 border-b border-b-zinc-100 space-y-5">
         <div class="flex flex-row space-x-5">
             <div class="size-11 aspect-square rounded-full border overflow-clip">
                 <a class="flex flex-row space-x-2" href="/@{post.author.handle}">
