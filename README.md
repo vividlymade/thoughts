@@ -32,3 +32,8 @@ A social media prototype recreating known mainstream platform concepts from scra
    ```bash
    docker compose down
    ```
+
+### Testing
+*One can run tests with respective commands:*
+- **E2E:** `npm run test:e2e`
+- **Unit:** `npm run test:unit`
