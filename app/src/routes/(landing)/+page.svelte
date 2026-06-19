@@ -20,7 +20,7 @@
 <!-- Dummy background posts. -->
 <div class="-z-15 select-none pointer-events-none">
     <!-- Main post wrapper. -->
-    <div class="absolute left-2/19 top-3/10 floating scale-80 origin-left will-change-transform">
+    <div class="absolute left-2/19 top-3/10 floating scale-80 origin-left will-change-transform drop-shadow-2xl/5">
         <!-- Rotation wrapper. -->
         <div class="-rotate-7">
             <PostElement post={
