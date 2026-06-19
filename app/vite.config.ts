@@ -20,6 +20,16 @@ export default defineConfig({
     },
   },
   plugins: [
+    /** Fixes vitest v4 setting base to '/'.
+     * Source: https://github.com/sveltejs/kit/issues/13376#issuecomment-3660772123 */
+    {
+      name: 'reset-base',
+      config() {
+        return {
+          base: '',
+        }
+      },
+    },
     arraybuffer(),
     tailwindcss(),
     sveltekit(),
