@@ -31,7 +31,7 @@ export const actions = {
 
         for(const [key, value] of formData.entries()) {
             if(currentFieldCount++ > REQUIRED_FIELD_COUNT) {
-                return fail(400)
+                return fail(HTTPCode.BAD_REQUEST)
             }
 
             if(key === EMAIL_FIELD_NAME) {
@@ -52,7 +52,7 @@ export const actions = {
 
         if(!EmailUtils.isEmailValid(email!)) {
             return fail(400)
-		}
+        }
 
         const foundUser = await globals.db.getRepository<User>(TableName.USERS)
             .createQueryBuilder('user')
@@ -74,7 +74,7 @@ export const actions = {
 
             event.cookies.set(CookieName.LOGIN_SESSION_TOKEN, newSessionToken, { path: '/', maxAge: 60, httpOnly: true, })
 
-            throw redirect(303, '/signup')
+            throw redirect(HTTPCode.SEE_OTHER, '/signup')
         }
 
         const newSigninSession = new PendingUserEmailSigninSession()
@@ -89,6 +89,6 @@ export const actions = {
 
         event.cookies.set(CookieName.LOGIN_SESSION_TOKEN, newSessionToken, { path: '/', maxAge: 60, httpOnly: true, })
 
-        throw redirect(303, '/signin/password')
+        throw redirect(HTTPCode.SEE_OTHER, '/signin/password')
     }
 }

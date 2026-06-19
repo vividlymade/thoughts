@@ -90,7 +90,7 @@ export const actions = {
         const signupSessionExists = !!signupSession
 
         if(!signupSessionExists) {
-            throw redirect(302, '/signin')
+            throw redirect(HTTPCode.FOUND, '/signin')
         }
 
         const formData = await event.request.formData()

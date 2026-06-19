@@ -38,7 +38,7 @@ export async function POST(event) {
 	const conversation = await ConversationService.findDirectMessageConversationByUsers(requestingConversationUserId, requestedConversationUserId)
 
 	if(conversation) {
-		throw redirect(303, `/messages/${conversation.id}`)
+		throw redirect(HTTPCode.SEE_OTHER, `/messages/${conversation.id}`)
 	}
 
 	const newConversation = new MessageConversation()
@@ -86,5 +86,5 @@ export async function POST(event) {
 		}
 	})
 
-	throw redirect(303, `/messages/${newConversationId}`)
+	throw redirect(HTTPCode.SEE_OTHER, `/messages/${newConversationId}`)
 }

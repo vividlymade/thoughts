@@ -53,17 +53,17 @@ export const actions = {
 
         for(const [key, value] of formData.entries()) {
             if(currentFieldCount++ > REQUIRED_FIELD_COUNT) {
-                return fail(400)
+                return fail(HTTPCode.BAD_REQUEST)
             }
 
             if(key === PASSWORD_FIELD_NAME) {
                 if(typeof value === 'string') {
                     password = value
                 } else {
-                    return fail(400)
+                    return fail(HTTPCode.BAD_REQUEST)
                 }
             } else {
-                return fail(400)
+                return fail(HTTPCode.BAD_REQUEST)
             }
         }
 
@@ -136,6 +136,6 @@ export const actions = {
         event.cookies.delete(CookieName.LOGIN_SESSION_TOKEN, { path: '/' })
         event.cookies.set(CookieName.SESSION_TOKEN, newSession.token, { path: '/', maxAge: 60 * 60 * 24 * 30, httpOnly: true, })
 
-        throw redirect(303, '/home')
+        throw redirect(HTTPCode.SEE_OTHER, '/home')
     }
 }
