@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { portal } from 'svelte-portal'
-	import { fly, scale, slide, blur } from 'svelte/transition'
+	import { fly, scale, slide } from 'svelte/transition'
 	import { onOutsideClick } from '../../../actions/onOutsideClick'
 	import FormTextInput from '$lib/modals/FormTextInput.svelte'
     import SearchIcon from '$lib/icons/search.svelte'
@@ -29,7 +29,7 @@
     let debounceTimer: ReturnType<typeof setTimeout> | undefined = $state()
 
     function onInput() {
-		/** Clears the current search. */
+		/** Clears the current search results. */
 		if(searchResults.length > 0) {
 			searchResults = []
 		}
@@ -53,6 +53,8 @@
                 method: 'GET',
             }).then(async (response) => {
                 const newResults = await response.json() as UsersSearchResponse
+
+                /** FIXME: Fix duplicated entries appearing in the results.  */
 
                 for(const entry of newResults.users) {
                     const profile = new Profile(
@@ -79,8 +81,6 @@
 	onDestroy(() => {
 		clearTimeout(debounceTimer)
     })
-
-    let pendingLoad = $derived(!!debounceTimer)
 
     const compactNumberFormatter = new Intl.NumberFormat(undefined, { notation: 'compact' })
 </script>

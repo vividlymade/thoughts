@@ -8,6 +8,7 @@ const enum ServerRealtimePacketType {
 	CHAT_MESSAGE = 'chat.message',
 	CHAT_MESSAGE_REPLY = 'chat.message_reply',
 	CHAT_MESSAGE_ACKNOWLEDGEMENT = 'chat.message.acknowledgement',
+	/** TODO: Implement message reactions. */
 	// CHAT_MESSAGE_REACTION = 'chat.message_reaction',
 }
 

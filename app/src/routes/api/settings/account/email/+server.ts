@@ -51,7 +51,7 @@ export async function POST(event) {
 		throw error(HTTPCode.CONFLICT)
 	}
 
-	/** TODO */
+	/** TODO: Implement the hash calculation on the server side. */
 	const hashOfProvidedPassword = '' + providedPassword
 
 	if(hashOfProvidedPassword !== user.passwordHash) {

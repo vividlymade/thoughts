@@ -29,7 +29,7 @@ export async function GET(event) {
 
 	const notificationsRepository = globals.db.manager.connection.getRepository<Notification>(TableName.NOTIFICATIONS)
 
-	/** TODO */
+	/** TODO: Add `afterTimeCursor` and `lastNotificationCursor` to the query as an option. */
 	notificationsRepository
 		.createQueryBuilder('notification')
 			.leftJoinAndSelect('post.author', 'author')
@@ -40,8 +40,10 @@ export async function GET(event) {
 		.where('post."authorId" = :id', { id: session!.userId, })
 		.orderBy('post.timestamp', 'DESC')
 		.addOrderBy('post.id', 'DESC')
-		/** Gets the max allowed notifications per load along with the extra one for checking whether there is more results. */
+		/** Gets the maximum allowed notifications per load along with the extra one for checking whether there is more results. */
 		.take(AppConsts.MAX_NOTIFICATIONS_PER_LOAD + 1)
+
+	/** TODO: Implement DTO object creation and prepare response with those. */
 
 	throw error(HTTPCode.INTERNAL_SERVER_ERROR)
 }

@@ -3,7 +3,7 @@
 	import AddNewConversationButton from './AddNewConversationButton.svelte'
 	import AppConsts from '../../../AppConsts'
 	import { untrack } from 'svelte'
-	import { Channel, ChannelContext, DirectChannel } from './Channel.svelte'
+	import { ChannelContext, DirectChannel } from './Channel.svelte'
 	import chat from '$lib/chat.svelte'
     import { slide } from 'svelte/transition'
 	import ConversationListEntry from './ConversationListEntry.svelte'
@@ -47,8 +47,6 @@
 			method: 'POST',
 		})
 	}
-
-	let canSend = $state(false)
 </script>
 
 <svelte:head>
@@ -66,7 +64,8 @@
             <input
                 id="search"
                 placeholder="Search..."
-                class="text-xs font-light w-full outline-none placeholder:text-[#b1b1b1] placeholder:select-none text-[#000000]"
+                class="text-xs font-light w-full outline-none placeholder:text-[#b1b1b1] placeholder:select-none
+                    text-[#000000]"
                 bind:value={conversationsSearchValue}
             >
         </div>

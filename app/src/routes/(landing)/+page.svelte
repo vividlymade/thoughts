@@ -20,7 +20,7 @@
 <!-- Dummy background posts. -->
 <div class="-z-15 select-none pointer-events-none">
     <!-- Main post wrapper. -->
-    <div class="absolute left-2/19 top-3/10 floating scale-80 origin-left will-change-transform">
+    <div class="absolute left-2/19 top-3/10 floating scale-80 origin-left will-change-transform drop-shadow-2xl/5">
         <!-- Rotation wrapper. -->
         <div class="-rotate-7">
             <PostElement post={
@@ -104,7 +104,7 @@
     <div class="flex flex-col space-y-22 items-center">
         <div class="p-6.5 px-10 bg-white/80 rounded-4xl backdrop-blur-xs" style="box-shadow: 0px 4px 50px rgba(0,0,0,0.11);">
             <h2 class="font-extralight text-[#535353] text-[16px]">
-                Discover what others talk about and share your own <u><b>thoughts!</b></u>
+                Discover what others talk about and share your own <span class="text-[#5081D4] font-light">thoughts!</span>
             </h2>
         </div>
 
@@ -117,6 +117,7 @@
 
     .floating:nth-child(1) { animation-delay: 0s; }
     .floating:nth-child(2) { animation-delay: -0.5s; }
+    /** Uncomment if more entries are needed. */
     /*.floating:nth-child(3) { animation-delay: -2s; }*/
     /*.floating:nth-child(4) { animation-delay: -3s; }*/
     /*.floating:nth-child(5) { animation-delay: -3.5s; }*/

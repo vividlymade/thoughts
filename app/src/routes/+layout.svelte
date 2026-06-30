@@ -2,7 +2,6 @@
     import '../app.css'
 	import Background from '$lib/Background.svelte'
     import { onNavigate } from '$app/navigation'
-	import { onMount } from 'svelte'
     import favIcon from '$lib/images/icon.svg'
 
     let { children } = $props()
@@ -75,11 +74,6 @@
         display: flex;
         flex-direction: column;
         view-transition-name: content;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*display: flex;*/
-        /*width: 100vw;*/
         min-height: 100vh;
-        /*place-content: center;*/
     }
 </style>

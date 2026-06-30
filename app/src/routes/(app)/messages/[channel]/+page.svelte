@@ -1,18 +1,12 @@
 <script lang="ts">
-    import type { PageProps } from './$types'
-	import { page } from '$app/state'
-    import avatar2Src from '$lib/images/start/examples/avatars/avatar_2.jpg'
-	import ChannelType from '../../../../chat/ChannelType'
 	import { MessageConversationType } from '../../../../db/entities/MessageConversationType'
     import EmojiIcon from '$lib/icons/face--satisfied.svelte'
 	import GIFIcon from '$lib/icons/GIF.svelte'
 	import ImageIcon from '$lib/icons/image.svelte'
     import SendIcon from '$lib/icons/send.svelte'
-    import ReplyIcon from '$lib/icons/reply.svelte'
     import Checkmark from '$lib/icons/checkmark.svelte'
     import EmojiPicker from '$lib/EmojiPicker.svelte'
     import OverflowMenuHorizontalIcon from '$lib/icons/overflow-menu--horizontal.svelte'
-	import type ImageAttachment from '../../../../post/ImageAttachment'
 	import { onMount, tick } from 'svelte'
     import { flip } from 'svelte/animate'
     import { slide } from 'svelte/transition'
@@ -155,7 +149,7 @@
                 newMessage.authorHandle = data.localUserHandle!
                 newMessage.time = new Date(responseData.time)
                 newMessage.content = content
-                /** TODO */
+                /** TODO: Implement attachment feature in the DMs. */
                 newMessage.attachments = []
 
 				content = ""

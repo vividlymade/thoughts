@@ -1,10 +1,6 @@
 <script lang="ts">
     import { portal } from 'svelte-portal'
-    import { fly, scale, slide, blur } from 'svelte/transition'
-	import BlogIcon from '$lib/icons/blog.svelte'
-	import AddCommentIcon from '$lib/icons/add-comment.svelte'
-	import UserFollowIcon from '$lib/icons/user--follow.svelte'
-	import WarningIcon from '$lib/icons/warning--alt--filled.svelte'
+    import { fly, scale, slide } from 'svelte/transition'
 	import FormTextInput from '$lib/modals/FormTextInput.svelte'
 	import EmailIcon from '$lib/icons/email.svelte'
 	import PasswordIcon from '$lib/icons/password.svelte'
@@ -73,7 +69,7 @@
                 <p class="font-semibold text-sm">Changing e-mail</p>
             </div>
             <FormTextInput label="Current e-mail" placeholder="Your current e-mail" icon={EmailIcon} bind:value={currentEmail} type="email" />
-            <FormTextInput label="Current e-mail" placeholder="Your new e-mail" icon={EmailIcon} bind:value={newEmail} type="email" />
+            <FormTextInput label="New e-mail" placeholder="Your new e-mail" icon={EmailIcon} bind:value={newEmail} type="email" />
             <FormTextInput label="Current password" placeholder="Your password" icon={PasswordIcon} bind:value={currentPassword} type="password" />
         </div>
 

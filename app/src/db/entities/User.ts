@@ -14,63 +14,72 @@ export default class User {
     @PrimaryColumn('uuid')
     id!: string
 
-    /** The handle of the user. */
+    /** The unique public handle of this user. */
     @Index()
     @Column('text', { unique: true })
     handle!: string
 
-    /** The name of the user. */
+    /** The public name of this user. */
     @Column('text')
     name!: string
 
+    /** The e-mail of this user. */
     @Index()
     @Column('text', { unique: true })
     email!: string
 
-    /** The profile picture of the user. */
+    /** The profile picture OID of this user. */
     @Column({ type: 'oid' as any, nullable: true })
     pictureOid!: number
 
-    /** The description of the user. */
+    /** The description of this user's profile. */
     @Column('text', { nullable: true })
     description?: string
 
     @Column('text', { select: false })
     passwordHash!: string
-    /** The registration timestamp of the user. */
+    /** The registration timestamp of this user. */
     @Column('timestamptz')
     registrationTimestamp!: Date
 
     @Column('boolean', { default: false })
     hasVisitedWelcomePage!: boolean
 
-    /** The relation between posts that have been posted by the user. */
+    /** The posts that user has posted. */
     @OneToMany(() => Post, (post) => post.author)
     posts!: Relation<Post>[]
+    /** The posts that user has shared. */
     @OneToMany(() => PostShare, (postShare) => postShare.author)
     postShares!: Relation<PostShare>[]
 
+    /** The currently active sessions for this user's account. */
     @OneToMany(() => UserSession, (session) => session.user)
     activeSessions!: Relation<UserSession>[]
 
+    /** The users following this user. */
     @OneToMany(() => UserFollow, (follow) => follow.followee)
     followers!: Relation<UserFollow>[]
 
+    /** The users followed by this user. */
     @OneToMany(() => UserFollow, (follow) => follow.follower)
     following!: Relation<UserFollow>[]
 
     @OneToMany(() => Notification, (notification) => notification.recipient)
     notifications!: Relation<Notification>[]
 
+    /** The denormalized counter reflecting the total number of associated `UserFollow` records for this user. */
     @Column('bigint', { default: 0 })
     followersCount!: bigint
 
+    /** The denormalized counter reflecting the total number of associated `UserFollow` records of other users followed by this user. */
     @Column('bigint', { default: 0 })
     followingCount!: bigint
 
+    /** The conversations this user is participating in. */
     @OneToMany(() => MessageConversation, (conversation) => conversation.participants)
     conversations!: Relation<MessageConversation>
 
+    /** The identifier of the last active conversation. Used for recalling the last conversation when opening the messenger. */
     @Column('uuid', { nullable: true })
     lastActiveConversationId?: string
 

@@ -3,7 +3,6 @@ import type User from '../../../../db/entities/User'
 import TableName from '../../../../db/TableName'
 import { error } from '@sveltejs/kit'
 import HTTPCode from '../../../../HTTPCode'
-import UserSessionService from '$lib/server/services/UserSessionService'
 
 export interface ResponseProfile {
     name: string

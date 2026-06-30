@@ -1,6 +1,7 @@
 import { LargeObjectManager } from 'pg-large-object'
 
 export default {
+	/** Reads LargeObject's binary data into a buffer in one shot. */
 	async readAsBuffer(largeObjectManager: LargeObjectManager, oid: number) {
 		const largeObject = await largeObjectManager.openAsync(oid, LargeObjectManager.READ)
 
@@ -34,6 +35,7 @@ export default {
 			})
 		})
 	},
+	/** Writes binary data from a buffer into a LargeObject's stream. */
 	async writeFromBuffer(largeObjectManager: LargeObjectManager, oid: number, buffer: Buffer) {
 		const largeObject = await largeObjectManager.openAsync(oid, LargeObjectManager.WRITE)
 

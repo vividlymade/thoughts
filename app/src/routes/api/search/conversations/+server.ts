@@ -17,6 +17,7 @@ export async function GET(event) {
 
     const messageConversationsRepository = globals.db.manager.connection.getRepository<MessageConversation>(TableName.USERS)
 
+	/** TODO: Implement proper conversation search query. */
 	const conversations = await messageConversationsRepository
         .createQueryBuilder('conversation')
         // .select([
@@ -33,7 +34,7 @@ export async function GET(event) {
         .take(AppConsts.MAX_SEARCH_USER_RESULTS + 1)
         .getMany()
 
-	/** TODO */
+	/** TODO: Implement DTO object creation and prepare response with those. */
 
 	throw error(HTTPCode.INTERNAL_SERVER_ERROR)
 }

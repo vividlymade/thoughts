@@ -8,10 +8,12 @@ export default class RequestedUserRemoval {
     @RelationId((requestedUserRemoval: RequestedUserRemoval) => requestedUserRemoval.user)
     userId!: string
 
+	/** The user that has requested its account removal. */
 	@OneToOne(() => User, {
 		onDelete: 'CASCADE',
 	})
 	@JoinColumn()
 	user!: Relation<User>
+	/** The time when the user has requested its account removal. */
 	time!: Date
 }

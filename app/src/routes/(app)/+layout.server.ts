@@ -51,6 +51,7 @@ export async function load(event) {
 		response.localUserHandle = user.handle
 		response.localUserName = user.name
 
+		/** Redirects to the welcome page if one hasn't set it up yet. */
 		if (!user.hasVisitedWelcomePage) {
 			const expectedPath = '/welcome'
 

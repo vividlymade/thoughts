@@ -3,7 +3,6 @@ import type Post from '../../../db/entities/Post'
 import type { PostReplyResponse, ResponsePost } from '../../../routes/api/posts/+server'
 import type { Repository } from 'typeorm'
 import type PostLike from '../../../db/entities/PostLike'
-import type User from '../../../db/entities/User'
 
 export default {
 	getImageAttachmentIds(attachments: PostImageAttachment[]) {
@@ -25,7 +24,7 @@ export default {
 			const attachmentIds = reply.attachments
 
 			replies.push({
-				/** TODO */
+				/** TODO: Handle attachments. */
 				attachments: [],
 				authorId: reply.authorId,
 				authorHandle: reply.author.handle,
@@ -54,12 +53,14 @@ export default {
 		}
 	},
 
+	/** Gets all the likes for the given post. It doesn't use denormalized counter. */
 	async countPostLikes(postLikesRepository: Repository<PostLike>, post: Post) {
 		return await postLikesRepository.countBy({
 			postId: post.id,
 		})
 	},
 
+	/** Checks whether the post is liked by the given user. */
 	async isPostLikedByUser(postLikesRepository: Repository<PostLike>, postId: string, userId: string) {
 		return await postLikesRepository.findOneBy({
 			postId: postId,

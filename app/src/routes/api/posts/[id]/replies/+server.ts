@@ -14,7 +14,6 @@ import User from '../../../../../db/entities/User'
 import { randomUUID } from 'crypto'
 import PostImageAttachmentService from '$lib/server/services/PostImageAttachmentService.server'
 import DBPostUtils from '$lib/server/services/PostService.server'
-import type { NewPostResponse } from '../../+server'
 
 /** TODO: Implement getting the replies of the specific post. */
 export async function GET() {

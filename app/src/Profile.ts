@@ -1,5 +1,6 @@
 export default class Profile {
     id: string
+    /** The picture URL of this profile. */
     pictureURL: string
     handle: string
     name: string

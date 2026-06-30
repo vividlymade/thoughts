@@ -10,6 +10,7 @@ import TableName from '../TableName'
 
 @Entity(TableName.USER_SESSIONS)
 export default class UserSession {
+    /** The token associated with the active session used by browser. */
     @PrimaryColumn('text')
     token!: string
 
@@ -22,8 +23,10 @@ export default class UserSession {
     })
     user!: Relation<User>
 
+    /** The time when the session was created. */
     @Column('timestamptz')
     loginTimestamp!: Date
+    /** The time when the user was last active using this session. */
     @Column('timestamptz')
     lastTimeActive!: Date
 }

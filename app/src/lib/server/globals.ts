@@ -86,12 +86,15 @@ export const db = new DataSource({
         // GroupChat,
     ],
     migrations: migrations,
+    /** Can be uncommented for debugging purposes when needed. */
     // logging: 'all',
     connectTimeoutMS: 5000,
+    /** Can be uncommented for debugging purposes when needed. */
     // loggerLevel: "info",
     // logNotifications: true
 })
 
+/** Injects `oid` support into the driver. */
 if(!db.driver.supportedDataTypes.includes('oid' as any)) {
     db.driver.supportedDataTypes.push('oid' as any)
 }
