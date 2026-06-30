@@ -1,6 +1,8 @@
 ## Thoughts
 A social media prototype recreating known mainstream platform concepts from scratch.
 
+![Landing page](docs/images/landing_page.webp)
+
 ### Stack used
 - **Vite** - build tool and development server.
 - **SvelteKit** - frontend & backend.
